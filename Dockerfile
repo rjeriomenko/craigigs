@@ -22,10 +22,5 @@ ENV DONT_PROMPT_WSL_INSTALL=true
 WORKDIR /Projects/craigigs
 COPY . /Projects/craigigs
 
-# Add a new user, set their password, and use the user
-RUN useradd -m docker && echo "docker:docker" | chpasswd \
-  && adduser docker sudo
-# USER docker
-
 # RUN npm i electron puppeteer
 # RUN code .
